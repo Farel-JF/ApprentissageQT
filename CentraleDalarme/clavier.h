@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QTimer>
+#include "detecteur.h"
+#include "detecteurtemporise.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,9 +25,17 @@ private slots:
     void TraiterChiffre();
     void on_pushButtonArret_clicked();
     void onTimerLed_timeout();
+    void on_pushButton_2_clicked();
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::Clavier *ui;
     QTimer timerLed;
+    Detecteur* leDetecteur;
+    DetecteurTemporise* leDetecteurTempo;
 };
 #endif // CLAVIER_H
